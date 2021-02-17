@@ -1,0 +1,48 @@
+
+    @if ($teste === '123')
+        É igual
+        
+    @elseif($teste == 123)
+        É igual a 123
+    @else
+        É diferente
+    @endif    
+
+    @unless ($teste === '123')
+        afsdaf
+    @else
+        afafsd
+    @endunless
+
+    @isset($teste2)
+        <p>{{ $teste2 }}</p>        
+    @endisset
+
+    @empty($teste3)
+        <p>Vazio...</p>
+    @endempty  
+
+    @auth
+        <p>Autenticado</p>
+    @else
+        <p>Não autenticado</p>
+    @endauth
+
+    @guest
+        <p>Não autenticado</p>    
+    @endguest
+
+    @switch($teste)
+        @case(1)
+            Igual 1
+            @break
+        @case(2)
+            Igual 2
+            @break
+        @case(123)
+            Igual 123
+            @break
+        @default
+            Default
+    @endswitch
+@endsection
